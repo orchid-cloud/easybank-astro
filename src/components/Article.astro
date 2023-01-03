@@ -1,0 +1,26 @@
+---
+export interface Props {
+  url: string;
+  image: string;
+  title: string;
+  author: string;
+  desc: string;
+}
+
+const { url, image, title, author, desc } = Astro.props;
+---
+
+<a href={url} class="article__item">
+  <div class="article__image" style={`background-image: url(${image})`}></div>
+  <div class="article__text">
+    <div class="article__author">
+      {author}
+    </div>
+    <div class="article__title">
+      {title}
+    </div>
+    <div class="article__description">
+      {desc}
+    </div>
+  </div>
+</a>
